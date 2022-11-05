@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Christian Perez - Twitter Bot</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mb-3">
+        <label for="tweet" class="form-label">What's on your mind?</label>
+        <textarea class="form-control" id="tweet" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary">Post Tweet</button>
+    </div>
+    <script>
+      const button = document.querySelector('button');
+
+      button.onclick = function() {
+        const tweet = document.querySelector('#tweet').value;
+        console.log('Tweet: ', tweet);
+
+
+        fetch('/twitter', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            tweet
+          })
+        })
+        .then((res) => res.json())
+        .then(() => alert('Tweet has successfully tweeted'))
+        .catch(() => alert('Error occurs, we were not able to tweet this for you'));
+
+      }
+    </script>
+  </body>
+</html>

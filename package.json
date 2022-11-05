@@ -1,0 +1,35 @@
+{
+  "name": "twitterbotwepapp",
+  "version": "1.0.0",
+  "description": "My first web app ^^.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "twitter": "^1.7.1",
+    "twitter-api-sdk": "^1.2.1",
+    "twitter-api-v2": "^1.12.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SlayAndPlay/twitteerWebApp.git"
+  },
+  "keywords": [
+    "twitter",
+    "beginner",
+    "webapp",
+    "bootstrap",
+    "nodejs"
+  ],
+  "author": "Christian Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlayAndPlay/twitteerWebApp/issues"
+  },
+  "homepage": "https://github.com/SlayAndPlay/twitteerWebApp#readme"
+}

@@ -1,0 +1,5 @@
+# Hide Credentials
+.env
+
+# Hide node modules
+node_modules
